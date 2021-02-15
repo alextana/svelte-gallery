@@ -6,14 +6,14 @@
 <div>
   <main>
     <Header />
-    <div class="container mx-auto my-8">
-      <Gallery />
-    </div>
+    <Gallery />
   </main>
 </div>
 
 <style global lang="postcss">
   body {
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

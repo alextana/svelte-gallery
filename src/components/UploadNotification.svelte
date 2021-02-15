@@ -1,12 +1,12 @@
 <script>
+  import { fly } from "svelte/transition";
   export let uploadStatus;
   export let imageURL;
-  import { slide } from "svelte/transition";
 </script>
 
 {#if uploadStatus === "complete"}
   <div
-    transition:slide
+    transition:fly={{ x: 200 }}
     class="upload__notification w-80 bg-gray-200 p-4 border border-gray-300 rounded-lg"
   >
     <div class="flex items-center">
@@ -26,8 +26,14 @@
 
 <style>
   .upload__notification {
-    position: absolute;
+    position: fixed;
+
     right: 50px;
     bottom: 50px;
+  }
+  @media (max-width: 550px) {
+    .upload__notification {
+      right: 0px;
+    }
   }
 </style>
