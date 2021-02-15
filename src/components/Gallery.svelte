@@ -183,10 +183,18 @@
   }
   .overlay img {
     max-width: 80%;
+
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @media (min-width: 1280px) {
+    .overlay img {
+      max-width: 800px;
+      max-height: 800px;
+    }
   }
   .splide {
     transition: 0.3s ease;
